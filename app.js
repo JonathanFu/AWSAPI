@@ -17,7 +17,7 @@ app.post('/', function(req, res) {
 
 app.get('/chartData/:chart', function(req, res) {
   
-    const params = {Bucket: 'chartjsondata', Key: req.params.chart + '.json'};
+    const params = {Bucket: process.env.BUCKET, Key: req.params.chart + '.json'};
 
     // Retrieve the object
     s3.getObject(params, (err, data) => {
