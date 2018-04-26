@@ -15,7 +15,7 @@ app.post('/', function(req, res) {
   });
 });
 
-app.get('chartData/:chart', function(req, res) {
+app.get('/chartData/:chart', function(req, res) {
   
     const params = {Bucket: 'chartjsondata', Key: req.params.chart + '.json'};
 
